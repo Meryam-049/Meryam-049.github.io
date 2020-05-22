@@ -1,12 +1,12 @@
 body
 {
-    background-color: blue;
+    background-color: #3A3335;
     color: #3A3335;
 }
 
 h1
 {
-    color: blue;
+    color: #F0544F;
 }
 
 a
@@ -20,7 +20,7 @@ a
 {
     max-width: 1200px;
     margin: 20px;
-    box-shadow: 6px 6px 3px black;
+    box-shadow: 6px 6px 15px black;
 }
 
 .zonetxt
