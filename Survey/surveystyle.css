@@ -1,29 +1,29 @@
 body
 {
-    background-color: blue
-    color: #3A3335
+    background-color: #FDF0D5;
+    color: #3A3335;
 }
 
 h1
 {
-    color: #F0544F
+    color: #F0544F;
 }
 
 a
 {
-    color: #D81E5B
-    font-weight: bold
-    font-decoration: none
+    color: #D81E5B;
+    font-weight: bold;
+    font-decoration: none;
 }
 
 .screenshot
 {
-    max-width: 1200px
-    margin: 20px
-    box-shadow: 6px 6px 3px black
+    max-width: 1200px;
+    margin: 20px;
+    box-shadow: 6px 6px 3px black;
 }
 
 .zonetxt
 {
-    width: 600px
+    width: 600px;
 }
