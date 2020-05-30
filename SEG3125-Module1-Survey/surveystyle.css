@@ -52,6 +52,7 @@ a
         margin-right:auto;
         margin-left: auto;
         display:block;
+        overflow: auto;
     }
 }
 
@@ -64,6 +65,7 @@ a
         margin-right:auto;
         margin-left: auto;
         display:block;
+        overflow: auto;
     }
 }
 

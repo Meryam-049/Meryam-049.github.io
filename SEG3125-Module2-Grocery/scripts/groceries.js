@@ -56,6 +56,7 @@ var products = [
 		name: "tomatoes",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 4.00
 	},
 	{
@@ -79,44 +80,54 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restrictTags) {
+function restrictListProducts(prods, restrictionsList) {
 
-	var product_names = prods;
+	console.log("Enter restrictProducts :");
 
-	if (restrictTags.includes("Vegan")){
-		var temp = product_names.filter(function(elem){ return elem.vegetarian == true; });
-		product_names = temp;
-	}
-	if (restrictTags.includes("Gluten Free")){
-		var temp = product_names.filter(function(elem){ return elem.glutenFree == true; });
-		product_names = temp;
-	}
-	if (restrictTags.includes("Organic")){
-		var temp = product_names.filter(function(elem){ return elem.organic == true; });
-		product_names = temp;
-	}
+	let products = [];
 
-	return product_names;
-
-	// Je n'ai pas trouvé de manière plus optimisée de faire ça, je ne sais pas comment
-	// faire correspondre les strings "Vegan" et les attributs .vegetarian
-	// En Java, j'aurais fait une enum.
-
-	/*
-	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+	for(let i=0; i<prods.length; i+=1) {
+		console.log(prods[i].name);
+		// V GF O
+		if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free") && restrictionsList.includes("Organic") && prods[i].vegetarian == true && prods[i].glutenFree == true && prods[i].organic == true){
+			console.log("V GF O");
+			products.push(prods[i]);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+		// V GF
+		else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free") && prods[i].vegetarian == true && prods[i].glutenFree == true){
+			console.log("V GF");
+			products.push(prods[i]);
 		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+		// V O
+		else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Organic") && prods[i].vegetarian == true && prods[i].organic == true){
+			console.log("V O");
+			products.push(prods[i]);
+		}
+		// GF O
+		else if (restrictionsList.includes("Organic") && restrictionsList.includes("Gluten Free") && prods[i].organic == true && prods[i].glutenFree == true){
+			console.log("GF O");
+			products.push(prods[i]);
+		}
+		// V
+		else if (restrictionsList.includes("Vegan") && prods[i].vegetarian == true){
+			products.push(prods[i]);
+		}
+		// GF
+		else if (restrictionsList.includes("Gluten Free") && prods[i].glutenFree == true) {
+			products.push(prods[i]);
+		}
+		// O
+		else if (restrictionsList.includes("Organic") && prods[i].organic == true){
+			products.push(prods[i]);
+		}
+		// None
+		else if (restrictionsList.length == 0){
+			products.push(prods[i]);
+		} else {
 		}
 	}
-	return product_names;
-	*/
+
+	return products;
 }
 
 // Calculate the total price of items, with received parameter being a list of products

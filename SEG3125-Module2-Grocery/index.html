@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp-->
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-<h1>Adaptishop</h1>
+<h1>Easy Groceries</h1>
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client'); hello(); makeRestrictList('restrictionsList');">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products'); hello();">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart'); hello();">Cart</button>
+  <button class="tablinks" onclick="openInfo(event, 'Client'); makeRestrictList('restrictionsOptions');">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
 </div>
 
 <!-- Tab content -->
@@ -21,8 +20,8 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<div id="restrictionsList"></div>
-	<!-- <div id="displayRestList"></div> -->
+	<div id="restrictionsOptions"></div>
+	<button id="preselect" type="button" class="block" onclick="populateListProductChoices(getRestrictions(),'displayProduct');">Filter Products</button>
 </div>
 
 <div id="Products" class="tabcontent">
@@ -41,6 +40,7 @@
   <div id="displayCart"></div>
 </div>
 
+<footer>Site par Hammoud Mariam - CSI3525</footer>
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
 

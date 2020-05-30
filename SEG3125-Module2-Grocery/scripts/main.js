@@ -22,20 +22,76 @@ function openInfo(evt, tabName) {
 
 }
 
+// Restrictions list in Array
+var restrictOptions = ["Vegan","Gluten Free","Organic"];
+
+// Makes a list of checkboxes with the possible restrictions in the list
+function makeRestrictList(restrict){
+
+	restList = document.getElementById(restrict);
+	restList.innerHTML = "";
+
+	for(i = 0; i < restrictOptions.length; i++){
+		var checkbox = document.createElement("input");
+		checkbox.type = "checkbox";
+		checkbox.name = "restriction";
+		checkbox.id = restrictOptions[i];
+		checkbox.value = restrictOptions[i];
+		restList.appendChild(checkbox);
+
+		var label = document.createElement('label');
+		label.htmlFor = restrictOptions[i];
+		label.appendChild(document.createTextNode(restrictOptions[i]));
+		restList.appendChild(label)
+
+		restList.appendChild(document.createElement('br'));
+	}
+}
+
+
+function getRestrictions(){
+
+	console.log("Enter getRestrictions :");
+	var restrictions = []
+
+	for(i = 0; i < restrictOptions.length; i++){
+		var option = document.getElementById(restrictOptions[i]);
+		console.log(option.id);
+
+		if (option.checked){
+			restrictions.push(option.id);
+		}
+	}
+
+	for(j = 0; j<restrictions.length;j++){
+		console.log(restrictions[j]);
+	}
+
+	return restrictions;
+}
+
 
 
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1);// Liste des restrictions
-    var s2 = document.getElementById(slct2);// Liste des produits filtrés à remplir
+	console.log("Enter populate :");
+	console.log(slct1);
+	console.log(slct2);
+	// Debug list pref
+
+	// slct1 is a Restrictions List
+    var s2 = document.getElementById(slct2); // List of products to display
 
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictListProducts(products, slct1);
+
+	// sort products by price
+	optionArray.sort(function(a,b){ return a.price - b.price; });
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -43,18 +99,20 @@ function populateListProductChoices(slct1, slct2) {
 
 	for (i = 0; i < optionArray.length; i++) {
 
-		var productName = optionArray[i];
+		var product = optionArray[i];
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = productName;
+		checkbox.value = product.name;
 		s2.appendChild(checkbox);
 
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.htmlFor = product.name;
+		label.appendChild(document.createTextNode(product.name));
+		label.appendChild(document.createTextNode("............."));
+		label.appendChild(document.createTextNode(String(product.price)));
 		s2.appendChild(label);
 
 		// create a breakline node and add in HTML DOM
@@ -90,72 +148,4 @@ function selectedItems(){
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
 
-}
-
-
-// Restrictions list in Array
-var restrictOptions = ["Vegan","Gluten Free","Organic","None"];
-
-// Makes a list of checkboxes with the possible restrictions in the list
-function makeRestrictList(restrict){
-
-	console.log("Enter makeRestrictList :");
-	console.log(restrict);
-
-	restList = document.getElementById(restrict);
-	restList.innerHTML = "";
-
-	for(i = 0; i < restrictOptions.length; i++){
-		var checkbox = document.createElement("input");
-		checkbox.type = "checkbox";
-		checkbox.name = "restriction";
-		checkbox.value = restrictOptions[i];
-		//checkbox.oninput = "buildFiltersList(restrictFilter, 'restriction'); populateListProductChoices(restrictFilter,'displayProduct');"
-		restList.appendChild(checkbox);
-
-		var label = document.createElement('label');
-		label.htmlFor = restrictOptions[i];
-		label.appendChild(document.createTextNode(restrictOptions[i]));
-		restList.appendChild(label)
-
-		restList.appendChild(document.createElement('br'));
-	}
-}
-
-var restrictFilter = [];
-
-// Returns the list of restrictions to filter the products
-function buildFiltersList(restrictFilter,checkbox){
-	boxList = document.getElementsByName(checkbox);// List des checkbox restrictions
-
-	for(i = 0; i < boxList.length; i++){
-		if(boxList[i].checked){
-			if (!restrictFilter.includes(boxList[i].value)){
-				restrictFilter.push(boxList[i].value);
-			}
-		} else {
-			if (restrictFilter.includes(boxList[i].value)){
-				var newList = restrictFilter.filter(function(value) { return value != boxList[i].value;});
-				restrictFilter = newList;
-			}
-		}
-	}
-
-}
-
-
-function displayRestrict(){
-	disp = document.getElementById("displayRestList");
-	disp.innerHTML = "";
-
-	for(i = 0; i < restrictFilter.length; i++;){
-		var elem = document.createTextNode(restrictFilter[i]);
-		disp.appendChild(elem);
-		disp.appendChild(document.createElement("br"));
-
-	}
-}
-
-function hello(){
-	console.log("Hello ^^!");
 }

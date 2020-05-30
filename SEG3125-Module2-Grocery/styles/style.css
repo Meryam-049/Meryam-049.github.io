@@ -1,10 +1,19 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
 /* Style the tab */
+body {
+    font-family: "Trebuchet MS";
+    font-size: 14px;
+    color: #0A210F;
+    background-color: #EAEFB1;
+}
+
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border: 1px solid #F29940;
+  background-color: #BEEE62;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -20,18 +29,68 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #F9DF74;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #F29940;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #F29940;
   border-top: none;
+  background-color: #F6F8DD;
+  border-bottom-left-radius: : 10px;
+  border-bottom-right-radius: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 32px;
+    color: #F29940;
+}
+
+h3{
+    color: #F29940;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    bottom: 0%;
+}
+
+.block {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #F29940;
+    border: 0px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    box-shadow: 0 9px #999;
+}
+
+.block:hover {
+    background-color: #BEEE62;
+    border: none;
+}
+
+.block:active {
+    background-color: #BEEE62;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    border: none;
+}
+
+.block:focus {
+    background-color: #BEEE62;
+    border: none;
 }
