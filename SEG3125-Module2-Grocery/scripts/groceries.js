@@ -86,49 +86,70 @@ function restrictListProducts(prods, restrictionsList) {
 
 	let products = [];
 
-	for(let i=0; i<prods.length; i+=1) {
-		console.log(prods[i].name);
-		// V GF O
-		if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free") && restrictionsList.includes("Organic") && prods[i].vegetarian == true && prods[i].glutenFree == true && prods[i].organic == true){
-			console.log("V GF O");
-			products.push(prods[i]);
+	// V GF O
+	if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free") && restrictionsList.includes("Organic")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].vegetarian == true && prods[i].glutenFree == true && prods[i].organic == true){
+				products.push(prods[i]);
+			}
 		}
-		// V GF
-		else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free") && prods[i].vegetarian == true && prods[i].glutenFree == true){
-			console.log("V GF");
-			products.push(prods[i]);
+	}
+	// V GF
+	else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Gluten Free")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].vegetarian == true && prods[i].glutenFree == true){
+				products.push(prods[i]);
+			}
 		}
-		// V O
-		else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Organic") && prods[i].vegetarian == true && prods[i].organic == true){
-			console.log("V O");
-			products.push(prods[i]);
+	}
+	// V O
+	else if (restrictionsList.includes("Vegan") && restrictionsList.includes("Organic")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].vegetarian == true && prods[i].organic == true){
+				products.push(prods[i]);
+			}
 		}
-		// GF O
-		else if (restrictionsList.includes("Organic") && restrictionsList.includes("Gluten Free") && prods[i].organic == true && prods[i].glutenFree == true){
-			console.log("GF O");
-			products.push(prods[i]);
+	}
+	// GF O
+	else if (restrictionsList.includes("Organic") && restrictionsList.includes("Gluten Free")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].organic == true && prods[i].glutenFree == true){
+				products.push(prods[i]);
+			}
 		}
-		// V
-		else if (restrictionsList.includes("Vegan") && prods[i].vegetarian == true){
-			products.push(prods[i]);
+	}
+	// V
+	else if (restrictionsList.includes("Vegan")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].vegetarian == true){
+				products.push(prods[i]);
+			}
 		}
-		// GF
-		else if (restrictionsList.includes("Gluten Free") && prods[i].glutenFree == true) {
-			products.push(prods[i]);
+	}
+	// GF
+	else if (restrictionsList.includes("Gluten Free")) {
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].glutenFree == true){
+				products.push(prods[i]);
+			}
 		}
-		// O
-		else if (restrictionsList.includes("Organic") && prods[i].organic == true){
-			products.push(prods[i]);
+	}
+	// O
+	else if (restrictionsList.includes("Organic")){
+		for(i = 0; i < prods.length; i++){
+			if(prods[i].organic == true){
+				products.push(prods[i]);
+			}
 		}
-		// None
-		else if (restrictionsList.length == 0){
+	} else {
+		for(i = 0; i < prods.length; i++){
 			products.push(prods[i]);
-		} else {
 		}
 	}
 
 	return products;
 }
+
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
