@@ -1,0 +1,5 @@
+Patron de structure utilisé : Centre scène : l'utilisateur utilise le centre de l'écran pour sa
+tâche principale, rechercher les produits.
+
+Patron de navigation : Patron répertoire et Breadcrumb : L'utilisateur choisit la catégorie 
+dans un répertoire, il peut ensuite revenir grâce à la navigation Breadcrumb.
