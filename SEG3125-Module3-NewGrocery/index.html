@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="makeRestrictList('restrictionsOptions');">
+    <header>
+        <!-- Title and header-->
+    </header>
+    <h1>EASY GROCERIES</h1>
+    <section id="filters">
+        <!-- Restrictions choose -->
+        <h3>Filter your products before choosing a category</h3>
+        <div id="restrictionsOptions"></div>
+        <h5>Price :</h5>
+        <input type="range"></input>
+        <h5>Choose an option :</h5>
+        <input type="radio" name="deliv" value="delivery" id="delivery"><label for="delivery">Delivery</label></input>
+        <input type="radio" name="deliv" value="pickup" id="pickup"><label for="pickup">Pick up</label></input>
+    </section>
+    <section class="maintab" id="categories">
+        <!-- Search for categories -->
+        <h3>Categories</h3>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Fruits'),'prodNav'); openProdDisplay('products'); makeNav('Fruits','breadcrumbs');"><h5>Fruits</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Vegetables'),'prodNav'); openProdDisplay('products'); makeNav('Vegetables','breadcrumbs');"><h5>Vegetables</h5></div> <!-- Call populate function with chose category -->
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Meat and Fish'),'prodNav'); openProdDisplay('products'); makeNav('Meat and Fish','breadcrumbs');"><h5>Meat and Fish</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Dairy'),'prodNav'); openProdDisplay('products'); makeNav('Dairy','breadcrumbs');"><h5>Dairy</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Grocery'),'prodNav'); openProdDisplay('products'); makeNav('Grocery','breadcrumbs');"><h5>Grocery</h5></div>
+    </section>
+    <section class="maintab" id="products">
+        <div id="breadcrumbs"></div>
+        <!-- Search for products -->
+        <h3>Products available according to your preferences</h3>
+        <div id="prodNav"></div>
+    </section>
+    <div id="cartPanel">
+        <!-- My cart (slide panel) -->
+        <h3 id='cartTitle'>My cart's content</h3>
+        <button class="toggleCart" id="openCart" onclick="openCart();">Show</button>
+        <button class="toggleCart" id="closeCart" onclick="closeCart();">Hide</button>
+        <div id = "myCart"></div>
+        <p>Total : <span id = "total"></span></p>
+        <button type = "button" id = "reset" onclick = "resetCart('myCart','total');">Reset cart</button>
+    </div>
+    <footer>
+        Site par Hammoud Mariam - CSI3525
+    </footer>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
