@@ -1,0 +1,50 @@
+.container-fluid
+{
+    height: 650px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.card-img-top .team
+{
+    width: 350px;
+    height: 350px;
+}
+
+.members
+{
+    align-content: center;
+}
+
+#book
+{
+    background-color: #986B3C;
+}
+
+#home
+{
+    background-image: url("../images/home_bg.jpg");
+    background-size: cover;
+}
+
+#aboutUs
+{
+    background-image: url("../images/aboutUs.jpg");
+    background-size: cover;
+}
+
+#services
+{
+    background-image: white;
+    background-size: cover;
+}
+
+h3
+{
+    color: red;
+}
+
+#hometxt
+{
+    vertical-align: center;
+}
