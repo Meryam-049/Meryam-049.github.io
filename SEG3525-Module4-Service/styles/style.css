@@ -1,8 +1,35 @@
-.container-fluid
+@font-face {
+    font-family: 'Landsans';
+    src: url('../fonts/Landsans-Medium.ttf');
+}
+
+body
+{
+    color: #19180A;
+    font-family: 'Landsans', 'Arial';
+}
+
+h3
+{
+    font-family: 'Landsans', 'Arial';
+    color: #986B3C;
+}
+
+.navbar
+{
+    background-color: #19190A;
+}
+
+.nav-item
+{
+    color: #85CBC0;
+}
+
+.container
 {
     height: 650px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .card-img-top .team
@@ -23,14 +50,10 @@
 
 #home
 {
-    background-image: url("../images/home_bg.jpg");
-    background-size: cover;
 }
 
 #aboutUs
 {
-    background-image: url("../images/aboutUs.jpg");
-    background-size: cover;
 }
 
 #services
@@ -38,12 +61,6 @@
     background-image: white;
     background-size: cover;
 }
-
-h3
-{
-    color: red;
-}
-
 #hometxt
 {
     vertical-align: center;
