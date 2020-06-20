@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>La Cyclerie</title>
+    <meta charset="utf-8">
+    <!-- CODE TIRÉ DE W3SCHOOLS TUTO BOOTSTRAP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="scripts/main.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-expand-sm fixed-top justify-content-center">
+        <ul class="navbar-nav">
+
+            <li class="nav-item"><a class="nav-link" href="#aboutUs">
+            <div class="icon" id="aboutIcon"></div>
+            A propos
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">
+                <div class="icon" id="serviceIcon"></div>
+                Nos services
+            </div>
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="#home"><img id="logo" src="images/logo_bleu.png"/></a></li>
+            <li class="nav-item"><a class="nav-link" href="#book">
+                <div class="icon" id="bookIcon"></div>
+                Réservations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">
+                <div class="icon" id="contactIcon"></div>
+                Contactez-nous</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="container-lg my-0 mx-auto px-5">
+        <div id="hometxt"><h3 id="homeh3">La Cyclerie</h3>
+            <p id="slogan">Votre spécialiste des vélos vintage</p>
+        </div>
+    </section>
+
+    <section id="aboutUs" class="container-lg my-0 mx-auto py-4 px-4">
+        <h3 class="text-center">A propos</h3>
+        <div class="card-deck">
+        <div class="card team" style="width: 350px; display: inline-block; margin: 15px;">
+            <img class="card-img-top team" src="images/mecano01.jpg">
+            <div class="card-body">
+                <h4 class="card-title">Benoit</h4>
+                <p class="card-text">Passionné de vélos de collection depuis plus de huit ans, il sait prendre soin de toutes les parties de votre bicyclette. Il aime l'assemblage et personnalise régulièrement des vélos pour nos clients.</p>
+            </div>
+        </div>
+
+        <div class="card team" style="width: 350px; display: inline-block; margin: 15px;">
+            <img class="card-img-top team" src="images/mecano02.jpg">
+            <div class="card-body">
+                <h4 class="card-title">Amine</h4>
+                <p class="card-text">L'anatomie de la bicyclette n'a aucun secret pour lui. Professionnel des réparations et mises au point, il ajustera votre vélo avec la précision d'un horloger.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="services" class="container-lg my-0 mx-auto py-4 px-4">
+        <h3 class="text-center">Nos services</h3>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="images/regtune.jpg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Remplacement de roues</h4>
+                    <p class="card-text">Roues de ville, de route, d'été, ou d'hiver, nous avons forcément ce qu.il vous faut !</p>
+                    <p class="price">$ 30.00</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/comptune.jpg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Mise au point</h4>
+                    <p class="card-text">Mise au point de base, ajustement du guidon, nettoyage de la chaîne et vérification des freins.</p>
+                    <p class="price">$ 40.00</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/fix.jpg">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Réparation</h4>
+                    <p class="card-text">Réparation ou remplacement des roues, des freins, de la chaîne ou tout autre partie.</p>
+                    <p class="price">$ 60.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" class="container-lg my-0 mx-auto py-4 px-4">
+        <div class="jumbotron my-3 mx-auto py-4 px-3">
+            <h3 class="text-center" id="booktxt">Reservez un rendez-vous</h3>
+            <form>
+                <div class="form-group">
+                    <label for="firstName">Prénom:</label>
+                    <input type="text" class="form-control" id="fname">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nom :</label>
+                    <input type="text" class="form-control" id="lname">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone :</label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+                <div class="btn-group my-3">
+                    <button type="button" class="btn btn-info">Remplacement</button>
+                    <button type="button" class="btn btn-info">Mise au point</button>
+                    <button type="button" class="btn btn-info">Réparation</button>
+                </div>
+                <div>
+                    <p>Choisissez votre mécanicien :</p>
+                        <a href="#" data-toggle="tooltip"  title="Je travaille les Lundis, Mercredis et Vendredis" class="tool"><label class="radio-inline"><input type="radio" name="mecano" class="choixmeca" value="benoit"> Benoit</label></a>
+                        <a href="#" data-toggle="tooltip"  title="Je travaille les Mardis, Jeudis et Vendredis" class="tool"><label class="radio-inline"><input type="radio" name="mecano" class="choixmeca" value="amine"> Amine</label></a>
+                </div>
+                <div>
+                    <label>Choisissez votre créneau horaire :</label>
+                    <input type="text" id="datepicker" class="my-3"/>
+                </div>
+
+                <!-- ========================= INFOS PAIEMENT ==================== -->
+                <div>
+                    <p>Informations de paiement :</p>
+                    <div class="row">
+                        <label class="radio-inline"><input type="radio" name="card"><img src="images/visa.jpg" class="paycard"/></label>
+                        <label class="radio-inline"><input type="radio" name="card"><img src="images/mastercard.jpg" class="paycard"/></label>
+                    </div>
+
+
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="namecard">Titulaire de la carte</label>
+                        <input type="text" class="form-control" id="namecard"/>
+                    </div>
+
+                    <div class="form-group col-sm-4">
+                        <label for="expyear">Date d'expiration</label>
+                        <input type="month" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-8">
+                        <label for="numcard">Numéro de la carte</label>
+                        <!-- Code de stack Overflow pour le hint dans l'input -->
+                        <input type="text" class="form-control" id="numcard" value="XXXX-XXXX-XXXX-XXXX" onfocus="this.value=''"/>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <a href="#" data-toggle="tooltip" title="Les trois chiffres au dos de la carte" class="tool"><label for="cvv">Code CVV  <img src="images/help.png" /></label></a>
+                        <input type="text" class="form-control" id="cvv" value="XXX" onfocus="this.value=''"/>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>Note :</strong> En cas d'absence sans préavis, $ 20 seront prélevés.
+                </div>
+
+                <div class="alert alert-success alert-dismissible" id="success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Réservation réussie !</strong> Merci de votre confiance.
+                </div>
+
+                <div class="alert alert-danger alert-dismissible" id="wrongPhone">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Echec.</strong> Numéro de téléphone invalide.
+                </div>
+
+                <div class="alert alert-danger alert-dismissible" id="wrongNum">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Echec.</strong> Numéro de carte bancaire invalide.
+                </div>
+
+                </div>
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-info" id="bookbtn">Réserver</button>
+            </div>
+            </form>
+
+        </div>
+    </section>
+
+    <section id="contact" class="container-lg my-0 mx-auto py-4 px-4">
+        <h3 class="text-center">Contactez-nous</h3>
+        <div id="carte">
+<div id="googleMap" style="width:600px;height:400px;"></div>
+
+<!-- CODE DE W3Schools -->
+
+<script>
+function myMap() {
+    var mapProp= {
+        center:new google.maps.LatLng(51.508742,-0.120850),
+        zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpJIfJz4iy4kb6pUv1YKIX1-Zcqd0NEds&callback=myMap"></script>
+<p>Adresse : 42 Rue machintruc</p>
+<p>H5L 9I0</p>
+<p>Num tel. : +1 000-000-0000</p>
+</div>
+    </section>
+<footer>
+    <p>Site par Hammoud Mariam 300094741</p>
+</footer>
+</body>
+</html>

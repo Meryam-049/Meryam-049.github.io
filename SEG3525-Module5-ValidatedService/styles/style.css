@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Landsans';
+    src: url('../fonts/landsans.ttf');
+}
+
+@font-face {
+    font-family:'Abraham';
+    src:url("../fonts/abraham.otf");
+}
+
+body
+{
+    background: url('../images/home_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #19180A;
+    font-family: 'Landsans', 'Comic Sans MS';
+    font-size: 1.5em;
+    position: relative;
+}
+
+h3
+{
+    font-family: 'Abraham', 'Comic Sans MS';
+    color: #986B3C;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+a
+{
+    color: #85CBC0;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+a:hover
+{
+    color: #669b93;
+}
+
+a:active
+{
+    color: #986b3c;
+}
+
+a:after
+{
+    color: #986b3c;
+}
+
+.container-lg
+{
+    background-color: rgba(252,247,248,0.85);
+}
+
+.jumbotron
+{
+    background-color: #986b3c;
+    width: 700px;
+    color: #FCF7F8;
+}
+
+#booktxt
+{
+    color: #85CBC0;
+}
+
+form
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#home
+{
+    height: 700px;
+    background-color: rgba(252,247,248,0.0);
+    padding-top: 4em;
+    padding-bottom: 3em;
+    line-height: 550px;
+    text-align: center;
+}
+
+#hometxt
+{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+#homeh3
+{
+    font-size: 5em;
+    color: white;
+}
+
+#slogan
+{
+    color: white;
+    font-size: 2em;
+}
+
+.navbar
+{
+    background-color: #19190A;
+}
+
+.nav-item
+{
+    color: #85CBC0;
+    vertical-align: middle;
+}
+
+#logo
+{
+    width: 80px;
+}
+.card-img-top .team
+{
+    width: 350px;
+    height: 350px;
+}
+
+.card-title
+{
+    font-size: 1.5em;
+    color: #986b3c;
+}
+
+.price
+{
+    font-size: 2em;
+    color: #85CBC0;
+}
+
+.members
+{
+    align-content: center;
+}
+
+#home
+{
+}
+
+#aboutUs
+{
+}
+
+#services
+{
+    background-image: white;
+    background-size: cover;
+}
+
+.card-deck
+{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#hometxt
+{
+    vertical-align: center;
+}
+
+#contact
+{
+    height: 700px;
+}
+
+.btn
+{
+    background-color: #85CBC0;
+    color: #FCF7F8;
+    font-size: 1em;
+}
+
+.btn:active
+{
+    background-color: #669b93;
+}
+
+.btn:hover
+{
+    background-color: #669b93;
+}
+
+.btn::after
+{
+    background-color: #669b93;
+}
+
+#carte
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#googleMap
+{
+    float: left;
+    margin: 20px;
+}
+
+footer
+{
+    font-size: 0.5em;
+    color: #FCF7F8;
+    text-align: center;
+}
+
+.icon
+{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutIcon
+{
+    background-image: url("../images/worker1.png");
+}
+#aboutIcon:hover
+{
+    background-image: url("../images/worker3.png");
+}
+#aboutIcon:active
+{
+    background-image: url("../images/worker2.png");
+}
+
+#serviceIcon
+{
+    background-image: url("../images/repair1.png");
+}
+#serviceIcon:hover
+{
+    background-image: url("../images/repair3.png");
+}
+#serviceIcon:active
+{
+    background-image: url("../images/repair2.png");
+}
+
+#bookIcon
+{
+    background-image: url("../images/calendar1.png");
+}
+#bookIcon:hover
+{
+    background-image: url("../images/calendar3.png");
+}
+#bookIcon:active
+{
+    background-image: url("../images/calendar2.png");
+}
+
+#contactIcon
+{
+    background-image: url("../images/contact1.png");
+}
+#contactIcon:hover
+{
+    background-image: url("../images/contact3.png");
+}
+#contactIcon:active
+{
+    background-image: url("../images/contact2.png");
+}
+
+#helpicon
+{
+    display: inline;
+}
+
+.form-control:focus
+{
+    background-color: #ffe2c4;
+}
+
+.paycard
+{
+    margin:5px;
+}
+
+.tool
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#success
+{
+    display: none;
+}
+
+#wrongPhone
+{
+    display: none;
+}
+
+#wrongNum
+{
+    display: none;
+}
