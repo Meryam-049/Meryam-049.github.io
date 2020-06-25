@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sondage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+    <header>
+        <h1 class="text-center">Sondage : Evaluez un tableau de bord</h1>
+    </header>
+    <section class="container-md p-3 my-3 bg-info text-white">
+    <div class="intro">
+        <p>Le site que j'ai choisi de vous faire évaluer s'appelle <a href="https://habitica.com/">Habitica</a>. Habitica est une application très cool et facile à prendre en main permettant d'organiser ses listes de tâches comme un RPG. Et comme j'aime les RPG, c'est parfait pour moi ^^ !</p><br/>
+        <div class="container-md">
+        <img src="/assets/screenshot_habitica.jpg" alt="Mon tableau de bord Habitica" title="Mon tableau de bord Habitica !" class="screenshot" style='width:800px' />
+        </div>
+    </div>
+
+        <form method="POST">
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded">
+                <h3>Utilisez vous souvent des listes de tâches ?</h3>
+                <select name="frequence">
+          			  <option value="souvent" selected="selected">Oui, souvent.</option>
+          			  <option value="parfois">Parfois, de temps en temps.</option>
+          			  <option value="rarement">Non, rarement.</option>
+                </select>
+            </div>
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded form-group">
+                <h3>La quantité d'informations sur le tableau de bord est :</h3>
+                <input type="radio" name="dashboard" value="trop_grande" id="trop_grande"/><label for="trop_grande">Trop grande, c'est confus.</label><br/>
+                <input type="radio" name="dashboard" value="grande" id="grande"/><label for="grande">Grande, mais j'apprécie d'avoir beaucoup d'informations.</label><br/>
+                <input type="radio" name="dashboard" value="raisonnable" id="raisonnable"/><label for="raisonnable">Raisonnable, c'est bien comme ça.</label><br/>
+                <input type="radio" name="dashboard" value="legere" id="legere"/><label for="legere">Légère, mais j'apprécie.</label><br/>
+                <input type="radio" name="dashboard" value="trop_legere" id="trop_legere"/><label for="trop_legere">Trop légère, j'aurais aimé plus d'informations.</label><br/>
+            </div>
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded form-group">
+                <h3>Sélectionnez les propositions avec lesquelles vous êtes d'accord :</h3>
+                <input type="checkbox" name="feeling" value="agreable"/><label for="agreable">L'application est agréable a utiliser</label><br/>
+                <input type="checkbox" name="feeling" value="clair"/><label for="clair">Le tableau de bord est clair</label><br/>
+                <input type="checkbox" name="feeling" value="onglets"/><label for="onglets">Il y a trop d'onglets à mon goût</label><br/>
+                <input type="checkbox" name="feeling" value="ajouter"/><label for="ajouter">Il est facile d'ajouter une tâche et de la cocher</label><br/>
+                <input type="checkbox" name="feeling" value="edit"/><label for="edit">Il est facile d'éditer une tâche</label><br/>
+                <input type="checkbox" name="feeling" value="couleurs"/><label for="couleurs">L'interface a trop de couleurs différentes</label><br/>
+                <input type="checkbox" name="feeling" value="icones"/><label for="icones">Je reconnais toutes les icônes</label><br/>
+            </div>
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded form-group">
+                <h3>L'utilisation de l'application vous semble intuitive :</h3>
+                <input type="radio" name="usage" value="dacodac" id="dacodac"/><label for="dacodac">Tout à fait d'accord</label><br/>
+                <input type="radio" name="usage" value="dac" id="dac"/><label for="dac">Plutôt d'accord</label><br/>
+                <input type="radio" name="usage" value="neutre" id="neutre"/><label for="neutre">Neutre</label><br/>
+                <input type="radio" name="usage" value="desac" id="desac"/><label for="desac">Pas vraiment</label><br/>
+                <input type="radio" name="usage" value="dutout" id="dutout"/><label for="dutout">Pas du tout d'accord</label><br/>
+            </div>
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded form-group">
+                <h3>Comment trouvez vous l'aspect gamification de l'interface ?</h3>
+                <input type="radio" name="game" value="encombrant" id="encombrant"/><label for="encombrant">Encombrant, il rend la prise en main de l'application difficile.</label><br/>
+                <input type="radio" name="game" value="inutile" id="inutile"/><label for="inutile">Inutile. Il n'a aucun effet particulier.</label><br/>
+                <input type="radio" name="game" value="pas_ess" id="pas_ess"/><label for="pas_ess">Agréable mais non essentiel.</label><br/>
+                <input type="radio" name="game" value="motiv" id="motiv"/><label for="motiv">Agréable et motivant.</label><br/>
+            </div>
+
+            <div class="container-md p-5 my-3 bg-light text-dark rounded form-group">
+                    <label for="descr"><h3>Pourriez vous décrire ce que l'interface vous évoque en trois adjectifs ?</h3></label><br/>
+                    <input type="text" name="descr" placeholder="Rétro, Pratique... "/><br/>
+            </div>
+
+                <input type="submit" value="Envoyer !" class="btn btn-dark" id="bb"/>
+        </form>
+    </section>
+
+    <footer>
+        <p class="text-center">Site web conçu par Mariam Hammoud 300094741</p>
+    </footer>
+
+    </body>
+</html>
